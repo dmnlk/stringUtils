@@ -4,6 +4,7 @@ stringUtils
 porting Apache commons lang by golang
 
 [![Build Status](https://travis-ci.org/dmnlk/stringUtils.svg?branch=master)](https://travis-ci.org/dmnlk/stringUtils)
+[![Coverage Status](https://img.shields.io/coveralls/dmnlk/stringUtils.svg)](https://coveralls.io/r/dmnlk/stringUtils)
 
 see also
 
