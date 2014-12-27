@@ -3,6 +3,7 @@ stringUtils
 
 porting Apache commons lang by golang
 
+[![Build Status](https://travis-ci.org/dmnlk/stringUtils.svg?branch=master)](https://travis-ci.org/dmnlk/stringUtils)
 
 see also
 
