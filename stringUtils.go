@@ -5,5 +5,8 @@ import (
 )
 
 func IsEmpty(s string) bool {
-	return true
+	if len(s) == 0 {
+		return true
+	}
+	return false
 }
