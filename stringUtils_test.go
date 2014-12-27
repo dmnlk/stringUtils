@@ -13,6 +13,18 @@ func TestIsEmpty(t *testing.T) {
 	if actual == false {
 		t.Errorf("fail test, black should empty")
 	}
-
 }
 
+
+func TestIsNotEmpty(t *testing.T) {
+	var notBlank string = "golang"
+	actual := IsNotEmpty(notBlank)
+	if  actual == false {
+		t.Errorf("fail test, not blank string should return true")
+	}
+	var blank string = ""
+	actual = IsNotEmpty(blank)
+	if actual == true {
+		t.Errorf("fail test, black should return false")
+	}
+}
