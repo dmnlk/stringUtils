@@ -6,4 +6,7 @@ before_install:
   - go get github.com/mattn/goveralls
   - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
 script:
-    - $HOME/gopath/bin/goveralls -repotoken XQfTdqJEvGGq4XfhNn2TdM9yQtr9zaB1O
+    - $HOME/gopath/bin/goveralls -repotoken $COVERALLS_TOKEN
+env:
+  global:
+    secure: KYgo08RCwarLD2OLjXuco2auiVQbyrlMR5YFDSXec+QUdg3t0kR9OG72UnOcPs5/X+4cSARQrW4uqm+xsbDbDWcpTYDqc06ius4rAxf2XAyOpF9ir+pOD9ama0CRuNcYZEpd5aYUV9oadhj7ch3ZUPvMde1rJ5xlNy6pT6B6ItE=
