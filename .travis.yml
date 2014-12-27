@@ -7,7 +7,7 @@ before_install:
 - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover;
   fi
 script:
-- $HOME/gopath/bin/goveralls -repotoken $COVERALLS_TOKEN
+- $HOME/gopath/bin/goveralls -repotoken XQfTdqJEvGGq4XfhNn2TdM9yQtr9zaB1O
 env:
   global:
   - secure: No/9aokPpkA3xjNp4DyywlsFB7G7G/wuVC/3G0xviX5+jhkvbqORSVwfrEOk4pppE8oxD+k7KYTPDPx8xecjc0WB46jquyVz9RHKQ9gZIehO5JjghPNjywe8wk6t248INNwHWsFec2RBxObjctbAw2li2yyIOKpB5cZ+NZGmL20=
