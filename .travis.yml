@@ -1,9 +1,13 @@
 nguage: go
 go:
-  - tip
+- tip
 before_install:
-  - go get github.com/axw/gocov/gocov
-  - go get github.com/mattn/goveralls
-  - if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
+- go get github.com/axw/gocov/gocov
+- go get github.com/mattn/goveralls
+- if ! go get code.google.com/p/go.tools/cmd/cover; then go get golang.org/x/tools/cmd/cover;
+  fi
 script:
-    - $HOME/gopath/bin/goveralls -repotoken $COVERALLS_TOKEN
+- $HOME/gopath/bin/goveralls -repotoken $COVERALLS_TOKEN
+env:
+  global:
+    secure: bpCQsm66gahxqZrqAZWxgHQB0tysrkGL3Vkpfu6BscAwZyzTHo+va+Rq9FSDa01hr/PQ30aXkB0MuzmPOih2ru2Sb4TGRCDPJ6W1kSDq4WQS7s5C+OCtX8LVVV7hOp/F0XCg9x2O8SZWCNzExX+tk79byUhpdxXaaYWd+eh/sek=
