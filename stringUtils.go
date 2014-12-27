@@ -5,5 +5,5 @@ import (
 )
 
 func IsEmpty(s string) bool {
-	return false
+	return true
 }
