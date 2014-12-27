@@ -10,4 +10,4 @@ script:
 - $HOME/gopath/bin/goveralls -repotoken $COVERALLS_TOKEN
 env:
   global:
-    secure: bpCQsm66gahxqZrqAZWxgHQB0tysrkGL3Vkpfu6BscAwZyzTHo+va+Rq9FSDa01hr/PQ30aXkB0MuzmPOih2ru2Sb4TGRCDPJ6W1kSDq4WQS7s5C+OCtX8LVVV7hOp/F0XCg9x2O8SZWCNzExX+tk79byUhpdxXaaYWd+eh/sek=
+  - secure: No/9aokPpkA3xjNp4DyywlsFB7G7G/wuVC/3G0xviX5+jhkvbqORSVwfrEOk4pppE8oxD+k7KYTPDPx8xecjc0WB46jquyVz9RHKQ9gZIehO5JjghPNjywe8wk6t248INNwHWsFec2RBxObjctbAw2li2yyIOKpB5cZ+NZGmL20=
