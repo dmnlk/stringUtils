@@ -1,7 +1,7 @@
 //port ApacheCommons lang string utils
 package stringUtils
 
-// Check if string is blank
+// Check if string is empty
 func IsEmpty(s string) bool {
 	if len(s) == 0 {
 		return true
@@ -9,17 +9,27 @@ func IsEmpty(s string) bool {
 	return false
 }
 
-// Check if string is not blank
+// Check if string is not empty
 func IsNotEmpty(s string) bool {
 	return !IsEmpty(s)
 }
 
-// Check if any one of strings are blank
+// Check if any one of strings are empty
 func IsAnyEmpty(strings ...string) bool {
-	for _, v := range strings {
-		if len(v) == 0 {
+	for _, s := range strings {
+		if len(s) == 0 {
 			return true
 		}
 	}
 	return false
+}
+
+//Checks if none of the strings are empty
+func IsNoneEmpty(strings ...string) bool {
+	for _, s := range strings {
+		if len(s) == 0 {
+			return false
+		}
+	}
+	return true
 }

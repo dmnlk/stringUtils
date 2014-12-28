@@ -5,7 +5,7 @@ import "testing"
 func TestIsEmpty(t *testing.T) {
 	var notBlank string = "golang"
 	actual := IsEmpty(notBlank)
-	if  actual == true {
+	if actual == true {
 		t.Errorf("fail test, not blank string should return false")
 	}
 	var blank string = ""
@@ -20,11 +20,10 @@ func TestIsEmpty(t *testing.T) {
 	}
 }
 
-
 func TestIsNotEmpty(t *testing.T) {
 	var notBlank string = "golang"
 	actual := IsNotEmpty(notBlank)
-	if  actual == false {
+	if actual == false {
 		t.Errorf("fail test, not blank string should return true")
 	}
 	var blank string = ""
@@ -52,7 +51,7 @@ func TestIsAnyEmpty(t *testing.T) {
 	if actual == false {
 		t.Errorf("fail test, not blank and blank string should return true")
 	}
-	actual =IsAnyEmpty(" golang ", "")
+	actual = IsAnyEmpty(" golang ", "")
 	if actual == false {
 		t.Errorf("fail test, not blank and blank string should return true")
 	}
@@ -63,5 +62,32 @@ func TestIsAnyEmpty(t *testing.T) {
 	actual = IsAnyEmpty("golang", "gophers")
 	if actual {
 		t.Errorf("fail test, not blank strings should return false")
+	}
+}
+
+func TestIsNoneEmpty(t *testing.T) {
+	actual := IsNoneEmpty("")
+	if actual == true {
+		t.Errorf("fail test, blank string should return false")
+	}
+	actual = IsNoneEmpty("", "golang")
+	if actual == true {
+		t.Errorf("fail test, blank string and string should return false")
+	}
+	actual = IsNoneEmpty("golang", "")
+	if actual == true {
+		t.Errorf("fail test, string and blank string should return false")
+	}
+	actual = IsNoneEmpty(" golang ", "")
+	if actual == true {
+		t.Errorf("fail test, string and blank string should return false")
+	}
+	actual = IsNoneEmpty(" ", "golang")
+	if actual == false {
+		t.Errorf("fail test, strings  should return true")
+	}
+	actual = IsNoneEmpty("golang", "gophers")
+	if actual == false {
+		t.Errorf("fail test, strings should return true")
 	}
 }
