@@ -13,6 +13,11 @@ func TestIsEmpty(t *testing.T) {
 	if actual == false {
 		t.Errorf("fail test, black should empty")
 	}
+	var spaceIncludeText string = " golang "
+	actual = IsEmpty(spaceIncludeText)
+	if actual == true {
+		t.Errorf("fail test, not blank string should return false")
+	}
 }
 
 
@@ -26,5 +31,10 @@ func TestIsNotEmpty(t *testing.T) {
 	actual = IsNotEmpty(blank)
 	if actual == true {
 		t.Errorf("fail test, black should return false")
+	}
+	var spaceIncludeText string = " golang "
+	actual = IsNotEmpty(spaceIncludeText)
+	if actual == false {
+		t.Errorf("fail test, not blank string should return false")
 	}
 }
