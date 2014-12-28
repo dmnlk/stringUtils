@@ -38,3 +38,30 @@ func TestIsNotEmpty(t *testing.T) {
 		t.Errorf("fail test, not blank string should return false")
 	}
 }
+
+func TestIsAnyEmpty(t *testing.T) {
+	actual := IsAnyEmpty("")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyEmpty("", "golang")
+	if actual == false {
+		t.Errorf("fail test, blank string and not blank string should return true")
+	}
+	actual = IsAnyEmpty("golang", "")
+	if actual == false {
+		t.Errorf("fail test, not blank and blank string should return true")
+	}
+	actual =IsAnyEmpty(" golang ", "")
+	if actual == false {
+		t.Errorf("fail test, not blank and blank string should return true")
+	}
+	actual = IsAnyEmpty(" ", "golang")
+	if actual {
+		t.Errorf("fail test, not blank strings should return false")
+	}
+	actual = IsAnyEmpty("golang", "gophers")
+	if actual {
+		t.Errorf("fail test, not blank strings should return false")
+	}
+}

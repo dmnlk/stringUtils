@@ -14,3 +14,7 @@ func IsEmpty(s string) bool {
 func IsNotEmpty(s string) bool {
 	return !IsEmpty(s)
 }
+
+func IsAnyEmpty(strings ...string) bool {
+	return false
+}
