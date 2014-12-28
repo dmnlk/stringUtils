@@ -1,9 +1,5 @@
 package stringUtils
 
-import (
-
-)
-
 func IsEmpty(s string) bool {
 	if len(s) == 0 {
 		return true
@@ -16,5 +12,10 @@ func IsNotEmpty(s string) bool {
 }
 
 func IsAnyEmpty(strings ...string) bool {
+	for _, v := range strings {
+		if len(v) == 0 {
+			return true
+		}
+	}
 	return false
 }
