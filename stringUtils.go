@@ -1,6 +1,8 @@
 //port ApacheCommons lang string utils
 package stringUtils
 
+import "regexp"
+
 // Check if string is empty
 func IsEmpty(s string) bool {
 	if len(s) == 0 {
@@ -39,7 +41,9 @@ func IsBlank(s string) bool {
 	if len(s) == 0 {
 		return true
 	}
-	if s == " " {
+	reg := regexp.MustCompile(`^\s+$`)
+	actual := reg.MatchString(s)
+	if actual {
 		return true
 	}
 	return false

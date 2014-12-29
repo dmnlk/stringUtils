@@ -101,7 +101,7 @@ func TestIsBlank(t *testing.T) {
 	if actual == false {
 		t.Errorf("fail test, space string should return true")
 	}
-	actual = IsBlank("  ")
+	actual = IsBlank("    ")
 	if actual == false {
 		t.Errorf("fail test, space strings should return true")
 	}
@@ -113,4 +113,9 @@ func TestIsBlank(t *testing.T) {
 	if actual == true {
 		t.Errorf("fail test, string should return false")
 	}
+	actual = IsBlank("   golang")
+	if actual == true {
+		t.Errorf("fail test, string should return false")
+	}
+
 }
