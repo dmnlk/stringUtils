@@ -24,7 +24,7 @@ func IsAnyEmpty(strings ...string) bool {
 	return false
 }
 
-//Checks if none of the strings are empty
+// Checks if none of the strings are empty
 func IsNoneEmpty(strings ...string) bool {
 	for _, s := range strings {
 		if len(s) == 0 {
@@ -32,4 +32,15 @@ func IsNoneEmpty(strings ...string) bool {
 		}
 	}
 	return true
+}
+
+// Checks if a string is whitespace, empty ("")
+func IsBlank(s string) bool {
+	if len(s) == 0 {
+		return true
+	}
+	if s == " " {
+		return true
+	}
+	return false
 }
