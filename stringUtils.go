@@ -17,8 +17,8 @@ func IsNotEmpty(s string) bool {
 }
 
 // Check if any one of strings are empty
-func IsAnyEmpty(strings ...string) bool {
-	for _, s := range strings {
+func IsAnyEmpty(ss ...string) bool {
+	for _, s := range ss {
 		if len(s) == 0 {
 			return true
 		}
@@ -27,8 +27,8 @@ func IsAnyEmpty(strings ...string) bool {
 }
 
 // Checks if none of the strings are empty
-func IsNoneEmpty(strings ...string) bool {
-	for _, s := range strings {
+func IsNoneEmpty(ss ...string) bool {
+	for _, s := range ss {
 		if len(s) == 0 {
 			return false
 		}
@@ -53,3 +53,4 @@ func IsBlank(s string) bool {
 func IsNotBlank(s string) bool {
 	return !IsBlank(s)
 }
+
