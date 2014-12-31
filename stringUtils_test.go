@@ -117,5 +117,27 @@ func TestIsBlank(t *testing.T) {
 	if actual == true {
 		t.Errorf("fail test, string should return false")
 	}
+}
 
+func TestIsNotBlank(t *testing.T) {
+	actual := IsNotBlank("")
+	if actual == true {
+		t.Errorf("fail test, blank string should return false")
+	}
+	actual = IsNotBlank(" ")
+	if actual == true {
+		t.Errorf("fail test, space string should return false")
+	}
+	actual = IsNotBlank("    ")
+	if actual == true {
+		t.Errorf("fail test, space strings should return false")
+	}
+	actual = IsNotBlank("golang")
+	if actual == false {
+		t.Errorf("fail test, string should return true")
+	}
+	actual = IsNotBlank(" golang ")
+	if actual == false {
+		t.Errorf("fail test, string should return true")
+	}
 }

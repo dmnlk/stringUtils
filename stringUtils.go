@@ -48,3 +48,8 @@ func IsBlank(s string) bool {
 	}
 	return false
 }
+
+// Checks if a string is not empty (""), not null and not whitespace only.
+func IsNotBlank(s string) bool {
+	return !IsBlank(s)
+}
