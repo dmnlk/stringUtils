@@ -56,11 +56,21 @@ func IsNotBlank(s string) bool {
 
 // Checks if any one of the strings are blank ("") or null and not whitespace only..
 func IsAnyBlank(ss ...string) bool {
-	for _, str := range ss {
+	for _, s := range ss {
 		// regexp cost is probably expensive
-		if IsBlank(str) {
+		if IsBlank(s) {
 			return true
 		}
 	}
 	return false
+}
+
+// Checks if none of the strings are blank ("") or null and whitespace only..
+func IsNoneBlank(ss ...string) bool {
+	for _, s := range ss {
+		if IsBlank(s) {
+			return false
+		}
+	}
+	return true
 }
