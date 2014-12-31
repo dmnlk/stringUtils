@@ -141,3 +141,31 @@ func TestIsNotBlank(t *testing.T) {
 		t.Errorf("fail test, string should return true")
 	}
 }
+
+func TestIsAnyBlank(t *testing.T) {
+	actual := IsAnyBlank("")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyBlank("", "golang")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyBlank("golang", "")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyBlank(" golang ", "")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyBlank(" ", "golang")
+	if actual == false {
+		t.Errorf("fail test, blank string should return true")
+	}
+	actual = IsAnyBlank("golang", "gophers")
+	if actual == true {
+		t.Errorf("fail test, blank string should return false")
+	}
+
+}
