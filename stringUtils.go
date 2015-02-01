@@ -1,7 +1,10 @@
 //port ApacheCommons lang string utils
 package stringUtils
 
-import "regexp"
+import (
+	"regexp"
+	"strings"
+)
 
 // Check if string is empty
 func IsEmpty(s string) bool {
@@ -73,4 +76,9 @@ func IsNoneBlank(ss ...string) bool {
 		}
 	}
 	return true
+}
+
+// Removes control characters  from both ends of this String
+func Trim(str string) string {
+	return strings.Trim(str, " ")
 }

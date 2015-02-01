@@ -200,4 +200,21 @@ func TestIsNoneBlank(t *testing.T) {
 	}
 }
 
-
+func TestTrim(t *testing.T) {
+	actual := Trim("")
+	if actual != "" {
+		t.Errorf("fail test, should return blank")
+	}
+	actual = Trim("     ")
+	if actual != "" {
+		t.Errorf("fail test, should return blank")
+	}
+	actual = Trim("abc")
+	if actual != "abc" {
+		t.Errorf("fail test, should return abc")
+	}
+	actual = Trim("  abc   ")
+	if actual != "abc" {
+		t.Errorf("fail test, should return abc")
+	}
+}
